@@ -2,7 +2,7 @@
 import sys
 
 
-def intitial_phonebook():
+def initial_phonebook():
     rows, cols = int(input("Please enter initial number of contact: ")), 5
 
 
@@ -18,8 +18,8 @@ def intitial_phonebook():
             if j == 0:
                 temp.append(str(input("Enter name*")))
 
-                if temp[j] == '' or temp[j] == ''
-                sys.exit("Name is a mandatory feild. Process exiting due to blank feild.")
+                if temp[j] == '' or temp[j] == '':
+                    sys.exit("Name is a mandatory feild. Process exiting due to blank feild.")
 
             if j == 1:
                 temp.append(int(input("Enter Nmber: ")))
@@ -80,5 +80,133 @@ def add_contact():
         if i == 4:
             dip.append(str(input("Enter category: ")))
     pb.append(dip) 
-
+    
     return pb
+
+def remove_existing(pb):
+    query = str(
+        input("Please enter the name of the contact you wish to remove")
+    )
+
+    trmp = 0
+
+    for i in range(len(pb)):
+        if query == pb[i][0]:
+            temp += 1
+
+            print(pb.pop(i))
+
+            print("This query has now been removed")
+
+
+            return pb
+    if temp == 0:
+
+        print("Sorry, you have entered an invalid query. \nPlease recheck and try again later.")
+        return pb
+
+def delete_all(pb):
+
+    return pb.clear()
+
+def search_existing(pb):
+    choice = int(input("Enter search criteria\n\n\n 1. Name\n2. Number\n3. Email-in\n4. DOB\n5. Category(Family/Friends/Work/Others/ \ \nPlease enter:)" ))
+
+    temp =[]
+    check = -1
+
+    if choice == 1:
+        query = str(input("Please enter the name of the contact you wish for to search: "))
+
+        for i in range(len(pb)):
+            if query == pb[i][0]:
+                check = i
+                temp.append(pb[i])
+
+    elif choice == 2:
+        query = int(input("Please enter the # of the contact you wish for to search: "))
+
+        for i in range(len(pb)):
+            if query == pb[i][1]:
+                check = i
+                temp.append(pb[i])
+
+
+    elif choice == 3:
+        query = str(input("Please enter the email/id of the contact you wish for to search: "))
+
+        for i in range(len(pb)):
+            if query == pb[i][2]:
+                check = i
+                temp.append(pb[i])
+
+    elif choice == 4:
+        query = str(input("Please enter the DOB of the contact you wish for to search: "))
+
+        for i in range(len(pb)):
+            if query == pb[i][3]:
+                check = i
+                temp.append(pb[i])
+
+                
+    elif choice == 5:
+        query = str(input("Please enter the category of the contact you wish for to search: "))
+
+        for i in range(len(pb)):
+            if query == pb[i][4]:
+                check = i
+                temp.append(pb[i])
+
+                
+    else:
+
+        print("invalid search criteria")
+        return -1
+    
+    if check==-1:
+        return -1
+    else:
+        display_all(temp)
+        return check
+    
+def display_all(pb):
+    if not pb:
+
+        print("list is empty: []")
+    else:
+        for i in range(len(pb)):
+            print(pb[1])
+
+def thanks():
+
+
+    print("***********************************************************************")
+    print("Thank you for visiting my phone book. Please visit again. Goodbye, have a nice day ahead.")
+
+
+
+    print("****************************************************")
+    print("Hello dear user. welcome to our smartphone directory system. You may now proceed to explore this directory.")
+
+
+ch = 1 
+pb = initial_phonebook()
+while ch in (1, 2, 3, 4, 5):
+    ch =menu()
+    if ch == 1:
+        pb = add_contact(pb)
+    elif ch == 2:
+        pb = remove_existing(pb)
+    elif ch == 3:
+        pb = delete_all(pb)
+    elif ch == 4:
+        d = search_existing(pb)
+        if d== -1:
+            print("The contact doesn't exist")
+    elif ch == 5:
+        display_all(pb)
+    else:
+        thanks()
+
+    
+
