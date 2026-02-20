@@ -1,0 +1,4 @@
+this is a written mode
+the contents are now overiding
+File is open in append mode
+The contents will not be overridden
