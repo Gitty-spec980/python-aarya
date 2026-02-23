@@ -14,13 +14,6 @@
 
 
 
-
-
-
-
-
-
-
 li=['red', 'green', 'black', 'blue']
 
 stu=["Aarya", 5,98.7,'07/25',['drama','singing']]
