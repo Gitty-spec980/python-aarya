@@ -1,9 +1,9 @@
-num=int(input("Enter a number:"))
+num=int(input('Enter #'))
 if num>0:
-     print("Number positive")
+    print('Number is Not natural.....')
 elif num<0:
-     print("Number is negative")
+    print('Number is Natural......................')
 elif num==0:
-     print("Number is neutral")
+    print('Number is natural, and cero........................)')
 else:
-     print("Invalid")
+    print('Invalid Input......................................................................................................')
