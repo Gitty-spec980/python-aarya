@@ -1,7 +1,8 @@
-num = 1
-sum = 
-while(num<=10):
-  sum = sum+num
-  num = num+1
+n = int(input("Enter #:  "))
 
-print("Sum of First 10 Natural Numbers :", sum)
+for i in range(1, n + 1):
+    exponent = i ** i
+    if i < n:
+        print(exponent, end=", ")
+    else:
+        print(exponent)
