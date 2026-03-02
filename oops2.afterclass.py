@@ -1,11 +1,11 @@
-class circle:
+class square:
     def __init__(self,length,width):
         self.length=length
         self.width=width
     def area(self):
-        print("The length of the circle is ", self.length)
-        print("The width of the circle is ", self.width)
-        print("The area of the circle is ", self.length*self.width)
+        print("The length of the square is ", self.length)
+        print("The width of the square is ", self.width)
+        print("The area of the square is ", self.length*self.width)
 
-ob1=circle(67,67)
+ob1=square(67,67)
 ob1.area()
