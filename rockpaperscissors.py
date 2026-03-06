@@ -8,7 +8,7 @@ while True:
     computer = random.choice(choices)
     print(f"\nYou chose {player}, computer chose {computer}.")
     if player == computer:
-        print("It is a tie. Both opponents chose {player},.")
+        print(f"It is a tie. Both opponents chose {player},.")
     elif player == "rock":
         if computer == "scissors":
             print("Rock defeats scissors. Player wins.")
@@ -23,12 +23,19 @@ while True:
         else:
             print("Rock smashes scissors. You lose")
             computer_wins+=1
+    elif player == "paper":
+        if computer == "rock":
+            print("paper covers rock. Player wins.")
+            player_wins+=1
+        else:
+            print("Scissor cuts paper. You lose.")
+            computer_wins+=1
     print("You have "+str(player_wins)+" wins")
     print("The computer has "+str(computer_wins)+" wins")
 
 
     repeat = input("\nPlay again? Yes or No?")
-    if repeat.lower() !="Yes":
+    if repeat.lower() !="yes":
         print("Thank you for playing with us dear player. We hope you have a wonderful day.")
         break
 
