@@ -41,7 +41,7 @@ def pick():
             if guess>10 or guess<1:
                 print("YA DUMB FILTHY ANIMAL THAT NUMBER ISNT IN THE RANGE")
 
-                print("pleASE ENtER A numBER BEtween 1 anD 10")
+                print("pleASE ENtER A numBER BEtween 1 anD 1cptone0")
 
         except:
             print("I DONT THINK THAT ",enter," is a number. sorry.....SIKEEEEE")
