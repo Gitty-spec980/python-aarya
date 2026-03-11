@@ -82,7 +82,7 @@ def game():
             print("It is a tie.")
 
         if turn =='x':
-            turn = 0
+            turn = 'o'
         else:
             turn = 'x'
 
