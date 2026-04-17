@@ -35,18 +35,19 @@
 
 #Write a Python program to count the number of even and odd numbers in a series of numbers. 2,6,9,4,1,7,34,29,74,11
 
-even=0
-odd=0
-nums=(2,6,9,4,1,7,34,29,74,11)
-even_num=[]
-odd_num=[]
-for i in nums:
-    if i%2==0:
-        even=even+1
-        even_num.append(i)
-    else:
-        odd=odd+1
-        odd_num.append(i)
-print("The number of odd digits is", odd,"and the number of even digits is", even)
-print(even_num)
-print(odd_num)
+# even=0
+# odd=0
+# nums=(2,6,9,4,1,7,34,29,74,11)
+# even_num=[]
+# odd_num=[]
+# for i in nums:
+#     if i%2==0:
+#         even=even+1
+#         even_num.append(i)
+#     else:
+#         odd=odd+1
+#         odd_num.append(i)
+# print("The number of odd digits is", odd,"and the number of even digits is", even)
+# print(even_num)
+# print(odd_num)
+
