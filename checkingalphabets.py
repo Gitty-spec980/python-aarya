@@ -1,8 +1,11 @@
-user_input_char = input("Put a value here to see if it is an alphabet- ")
+value= "x"
+if value >= "a" and value <= "z":
+    print(value, "is totally an alphabet.")
+else:
+    print(value, "is not an alphabet. You are a dihsapointment")
 
-if user_input_char: True
-print("This value is true")
-
-if user_input_char: False
-print("This value is False")
-
+character = "67"
+if character >= "a" and character <= "z":
+    print(character, "is an alphabet.")
+else:
+    print(character, "is not an alphabet.")
